@@ -19,6 +19,10 @@ namespace web_api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new() { Title = "web_api", Version = "v1" });
@@ -51,7 +55,6 @@ namespace web_api
                 endpoints.MapControllers();
             });
         }
-
 
     }
 }
