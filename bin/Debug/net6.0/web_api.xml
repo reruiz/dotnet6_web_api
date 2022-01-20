@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>web_api</name>
+    </assembly>
+    <members>
+        <member name="T:dotnet6_web_api.Controllers.DispositivosController">
+            <summary>
+            Controlador de la clase... 
+            ...
+            </summary>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Get">
+            <summary>
+            Devuelve información ...
+            ...
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dotnet6_web_api.Models.Dispositivos">
+            <summary>
+            Clase Dispositivos... 
+            ...
+            </summary>
+        </member>
+    </members>
+</doc>

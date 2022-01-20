@@ -84,3 +84,5 @@ C:\Users\Esteban\Desktop\App\dotnet\dotnet6_web_api\obj\Debug\net6.0\web_api.dll
 C:\Users\Esteban\Desktop\App\dotnet\dotnet6_web_api\obj\Debug\net6.0\ref\web_api.dll
 C:\Users\Esteban\Desktop\App\dotnet\dotnet6_web_api\obj\Debug\net6.0\web_api.pdb
 C:\Users\Esteban\Desktop\App\dotnet\dotnet6_web_api\obj\Debug\net6.0\web_api.genruntimeconfig.cache
+C:\Desarrollo\Backend\dotnet6_web_api\bin\Debug\net6.0\web_api.xml
+C:\Desarrollo\Backend\dotnet6_web_api\obj\Debug\net6.0\web_api.xml

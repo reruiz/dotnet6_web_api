@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,11 @@ namespace web_api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new() { Title = "web_api", Version = "v1" });
+
+                //Configura archivo xml para documentación
+                var archivoXML = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var rutaXML = Path.Combine(AppContext.BaseDirectory, archivoXML);
+                c.IncludeXmlComments(rutaXML);
             });
         }
 
