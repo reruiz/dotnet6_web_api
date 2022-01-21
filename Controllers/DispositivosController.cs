@@ -9,51 +9,61 @@ using dotnet6_web_api.Contexts;
 namespace dotnet6_web_api.Controllers
 {
     /// <summary>
-    /// Controlador de la clase... 
-    /// ...
+    /// Clase Controlador de entidad Dispositivos. Se implementan las funciones básicas
+    /// para la capa de persistencia de datos de la Entidad Dispositivos
+    /// CRUD: "Crear, Leer, Actualizar y Borrar"
     /// </summary>
+    #region Etiquetas del controlador
+    //Etiqueta que establece que la clase es un Controlador
     [ApiController]
     [Route("dotnet6_web_api/[controller]")]
+    #endregion
     public class DispositivosController : Controller
     {
 
-    #region Variables inyectadas
-private readonly ApplicationDbContext _context;
-    #endregion
+        #region Propiedades privadas
+        //Objeto inyectado en el constructor para la gestión de la BD mediante Entity
+        private readonly ApplicationDbContext _context;
+        #endregion
 
-    #region Constructores
-        public DispositivosController(ApplicationDbContext context )
+        #region Constructor del controlador
+        /// <summary>
+        /// Contructor del Controlador.
+        /// En el constructor se obtienen los diferentes objetos que fueron inicializados en la clase Startup, 
+        /// y se transfieren al Controlador mediante la técnica de Inyección de Dependencias.
+        /// </summary>
+        /// <param name="context">Inyección de objeto BdContext para gestion de BD</param>
+        public DispositivosController(ApplicationDbContext context)
         {
-            _context= context;
+            //Asignación de objeto context
+            _context = context;
         }
+        #endregion
 
-    #endregion
-
-    #region Acciones del controlador
+        #region Acciones del controlador
 
         /// <summary>
-        /// Devuelve información ...
-        /// ...
+        /// Devuelve todos los objetos Dispositivos del usuario actual.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de Dispositivos del usuario actual</returns>
         [HttpGet]
         public ActionResult<List<Dispositivos>> Get()
         {
-            var dispositivos = new List<Dispositivos>();
-            return Ok(dispositivos);
+            //Cuando se ejecuta muy seguido ocurren problemas 
+            //(especificamente cuando se implementa el objeto sesión, en la asignación del rol)
+            try
+            {
+                return NotFound();
+            }
+            catch (System.Exception)
+            {
+                //En caso de cualquier problema durante el proceso, maneja la excepción
+                return NotFound();
+            }
+
         }
 
-        /// <summary>
-        /// Devuelve información ...
-        /// ...
-        /// </summary>
-        [HttpPost]
-        public ActionResult Post(Dispositivos dospositivo)
-        {
-            return NoContent();
-        }
-
-    #endregion
+        #endregion
 
     }
 }

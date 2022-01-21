@@ -15,6 +15,10 @@ namespace dotnet6_web_api.Models
         public DateTime Tiempo { get; set; }
         public decimal Temperatura { get; set; }
         public decimal HumedadRelativa { get; set; }
+        public decimal HumedadSuelo { get; set; }
+        public decimal RadiacionSolar { get; set; }
         public decimal DispositivoId { get; set; }
+
+        public virtual Dispositivos Dispositivo { get; set; }
     }
 }

@@ -19,22 +19,24 @@
         </member>
         <member name="T:dotnet6_web_api.Controllers.DispositivosController">
             <summary>
-            Controlador de la clase... 
-            ...
+            Clase Controlador de entidad Dispositivos. Se implementan las funciones básicas
+            para la capa de persistencia de datos de la Entidad Dispositivos
+            CRUD: "Crear, Leer, Actualizar y Borrar"
             </summary>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.#ctor(dotnet6_web_api.Contexts.ApplicationDbContext)">
+            <summary>
+            Contructor del Controlador.
+            En el constructor se obtienen los diferentes objetos que fueron inicializados en la clase Startup, 
+            y se transfieren al Controlador mediante la técnica de Inyección de Dependencias.
+            </summary>
+            <param name="context">Inyección de objeto BdContext para gestion de BD</param>
         </member>
         <member name="M:dotnet6_web_api.Controllers.DispositivosController.Get">
             <summary>
-            Devuelve información ...
-            ...
+            Devuelve todos los objetos Dispositivos del usuario actual.
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Post(dotnet6_web_api.Models.Dispositivos)">
-            <summary>
-            Devuelve información ...
-            ...
-            </summary>
+            <returns>Lista de Dispositivos del usuario actual</returns>
         </member>
         <member name="T:dotnet6_web_api.Models.Datos">
             <summary>

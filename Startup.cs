@@ -25,7 +25,7 @@ namespace web_api
             services.AddControllers();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("defaultConnectionLocal")));
 
             services.AddSwaggerGen(c =>
             {
