@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj": {}
+    "C:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj": {}
   },
   "projects": {
-    "c:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj": {
+    "C:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj",
+        "projectUniqueName": "C:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj",
         "projectName": "web_api",
-        "projectPath": "c:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj",
+        "projectPath": "C:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj",
         "packagesPath": "C:\\Users\\esteb\\.nuget\\packages\\",
-        "outputPath": "c:\\Desarrollo\\Backend\\dotnet6_web_api\\obj\\",
+        "outputPath": "C:\\Desarrollo\\Backend\\dotnet6_web_api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\esteb\\AppData\\Roaming\\NuGet\\NuGet.Config",

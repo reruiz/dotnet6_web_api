@@ -9,17 +9,17 @@ namespace dotnet6_web_api.Models
     /// Clase Dispositivos... 
     /// ...
     /// </summary>
-    public class Dispositivos
+    public class Dispositivo
     {
-        public Dispositivos()
+        public Dispositivo()
         {
-            Datos = new HashSet<Datos>();
+            Datos = new HashSet<Dato>();
         }
 
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Modelo { get; set; }
 
-        public virtual ICollection<Datos> Datos { get; set; }
+        public virtual ICollection<Dato> Datos { get; set; }
     }
 }

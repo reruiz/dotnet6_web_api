@@ -9,7 +9,7 @@ namespace dotnet6_web_api.Models
     /// Clase Dispositivos... 
     /// ...
     /// </summary>
-    public class Datos
+    public class Dato
     {
         public int Id { get; set; }
         public DateTime Tiempo { get; set; }
@@ -19,6 +19,6 @@ namespace dotnet6_web_api.Models
         public decimal RadiacionSolar { get; set; }
         public decimal DispositivoId { get; set; }
 
-        public virtual Dispositivos Dispositivo { get; set; }
+        public virtual Dispositivo Dispositivo { get; set; }
     }
 }

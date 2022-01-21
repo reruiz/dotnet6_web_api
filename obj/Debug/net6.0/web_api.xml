@@ -38,13 +38,13 @@
             </summary>
             <returns>Lista de Dispositivos del usuario actual</returns>
         </member>
-        <member name="T:dotnet6_web_api.Models.Datos">
+        <member name="T:dotnet6_web_api.Models.Dato">
             <summary>
             Clase Dispositivos... 
             ...
             </summary>
         </member>
-        <member name="T:dotnet6_web_api.Models.Dispositivos">
+        <member name="T:dotnet6_web_api.Models.Dispositivo">
             <summary>
             Clase Dispositivos... 
             ...

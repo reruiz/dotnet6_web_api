@@ -47,7 +47,7 @@ namespace dotnet6_web_api.Controllers
         /// </summary>
         /// <returns>Lista de Dispositivos del usuario actual</returns>
         [HttpGet]
-        public ActionResult<List<Dispositivos>> Get()
+        public ActionResult<List<Dispositivo>> Get()
         {
             //Cuando se ejecuta muy seguido ocurren problemas 
             //(especificamente cuando se implementa el objeto sesión, en la asignación del rol)
