@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebAPIAutores
+namespace dotnet6_web_api.Contexts
 {
     public class ApplicationDbContext : DbContext
     {

@@ -4,6 +4,19 @@
         <name>web_api</name>
     </assembly>
     <members>
+        <member name="T:dotnet6_web_api.Controllers.DatosController">
+            <summary>
+            Controlador de la clase... 
+            ...
+            </summary>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DatosController.Index">
+            <summary>
+            Devuelve información ...
+            ...
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:dotnet6_web_api.Controllers.DispositivosController">
             <summary>
             Controlador de la clase... 
@@ -16,6 +29,18 @@
             ...
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Post(dotnet6_web_api.Models.Dispositivos)">
+            <summary>
+            Devuelve información ...
+            ...
+            </summary>
+        </member>
+        <member name="T:dotnet6_web_api.Models.Datos">
+            <summary>
+            Clase Dispositivos... 
+            ...
+            </summary>
         </member>
         <member name="T:dotnet6_web_api.Models.Dispositivos">
             <summary>

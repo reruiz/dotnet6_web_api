@@ -1948,19 +1948,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\esteb\\.nuget\\packages\\": {}
+    "C:\\Users\\Esteban\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj",
+      "projectUniqueName": "C:\\Users\\Esteban\\Desktop\\App\\dotnet\\dotnet6_web_api\\web_api.csproj",
       "projectName": "web_api",
-      "projectPath": "c:\\Desarrollo\\Backend\\dotnet6_web_api\\web_api.csproj",
-      "packagesPath": "C:\\Users\\esteb\\.nuget\\packages\\",
-      "outputPath": "c:\\Desarrollo\\Backend\\dotnet6_web_api\\obj\\",
+      "projectPath": "C:\\Users\\Esteban\\Desktop\\App\\dotnet\\dotnet6_web_api\\web_api.csproj",
+      "packagesPath": "C:\\Users\\Esteban\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Esteban\\Desktop\\App\\dotnet\\dotnet6_web_api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\esteb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Esteban\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2013,7 +2013,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
