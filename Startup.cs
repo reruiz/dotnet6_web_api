@@ -1,3 +1,4 @@
+using AutoMapper;
 using System;
 using System.IO;
 using System.Reflection;
@@ -22,6 +23,7 @@ namespace web_api
         // Add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
             services.AddControllers();
 
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -36,6 +38,8 @@ namespace web_api
                 var rutaXML = Path.Combine(AppContext.BaseDirectory, archivoXML);
                 c.IncludeXmlComments(rutaXML);
             });
+
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // Configure the HTTP request pipeline.
@@ -54,10 +58,6 @@ namespace web_api
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
         }
 
     }

@@ -9,7 +9,6 @@ namespace dotnet6_web_api.Contexts
 {
     public class ApplicationDbContext : DbContext
     {
-
         #region Constructor
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
@@ -21,7 +20,12 @@ namespace dotnet6_web_api.Contexts
         public DbSet<Dato> Datos { get; set; }
         #endregion
 
-        #region Formato de tablas y columnas de la bd
+        #region Formateado (mediante la API Fluent) de las tablas y columnas de la bd generada
+        //API Fluent: Es una forma avanzada de especificar la configuración del modelo que cubre todo
+        //lo que pueden hacer las anotaciones de datos (Ejem: [Column(TypeName = "decimal(5, 2)")]), 
+        //además de algunas configuraciones más avanzadas que no son posibles con las anotaciones de 
+        //datos. Las anotaciones de datos y la API fluida se pueden usar juntas, pero Code First da 
+        //prioridad a la API fluida > anotaciones de datos > convenciones predeterminadas.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Dispositivo>(entity =>
@@ -58,7 +62,7 @@ namespace dotnet6_web_api.Contexts
                 //HasConstraintName("FK_cultivos_programas"): Nombre de la relación en la BD.
                 entity.HasOne(d => d.Dispositivo)
                 .WithMany(p => p.Datos)
-                .HasForeignKey(d => d.Dispositivo)
+                .HasForeignKey(d => d.DispositivoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_datos_Dispositivos");
 
