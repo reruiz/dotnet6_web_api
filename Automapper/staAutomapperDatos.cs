@@ -14,7 +14,7 @@ namespace dotnet6_web_api.Automapper
     /// Una clase 'AutomapperEntidad' por entidad que es necesario mapear en los controladores.
     /// Simplifica codigo y atiende a las particularidades que automapper no soluciona facilmente.
     /// </summary>
-    public class AutomapperDatos
+    public class AutomapperDato
     {
         /// <summary>
         /// Mapea DTO para visualizar.
@@ -52,7 +52,7 @@ namespace dotnet6_web_api.Automapper
         /// <param name="fuente">DTO ingresada por el usuario</param>
         /// <param name="mapper">Objeto mapper inyectado</param>
         /// <returns>Entidad para crear BD</returns>
-        public static Dato Crear(DispositivoCrearEditarDTO fuente, IMapper mapper)
+        public static Dato Crear(DatoCrearEditarDTO fuente, IMapper mapper)
         {
             var dato = mapper.Map<Dato>(fuente);
             return dato;

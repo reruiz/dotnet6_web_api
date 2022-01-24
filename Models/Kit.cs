@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace dotnet6_web_api.Models
 {
-    public class Dispositivo
+    public class Kit
     {
-        public Dispositivo()
+        public Kit()
         {
-            Datos = new HashSet<Dato>();
             KitsDispositivos = new HashSet<KitDispositivo>();
         }
-
 
         public int Id { get; set; }
 
@@ -21,12 +19,10 @@ namespace dotnet6_web_api.Models
         public string Nombre { get; set; }
 
         [Column(TypeName = "varchar(200)")]
-        public string Modelo { get; set; }
+        public string Propietario { get; set; }
 
         [Column(TypeName = "varchar(1000)")]
         public string Descripcion { get; set; }
-
-        public virtual ICollection<Dato> Datos { get; set; }
 
         public virtual ICollection<KitDispositivo> KitsDispositivos { get; set; }
     }

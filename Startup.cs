@@ -23,7 +23,7 @@ namespace web_api
         // Add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+
             services.AddControllers();
 
             services.AddDbContext<ApplicationDbContext>(options =>
