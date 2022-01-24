@@ -58,6 +58,11 @@ namespace web_api
 
             app.UseAuthorization();
 
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
         }
 
     }
