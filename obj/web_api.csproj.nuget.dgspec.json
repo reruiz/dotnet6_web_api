@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Esteban\\Desktop\\dotnet6_web_api\\web_api.csproj": {}
+    "c:\\Users\\esteb\\OneDrive\\Escritorio\\dotnet6_web_api\\web_api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Esteban\\Desktop\\dotnet6_web_api\\web_api.csproj": {
+    "c:\\Users\\esteb\\OneDrive\\Escritorio\\dotnet6_web_api\\web_api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Esteban\\Desktop\\dotnet6_web_api\\web_api.csproj",
+        "projectUniqueName": "c:\\Users\\esteb\\OneDrive\\Escritorio\\dotnet6_web_api\\web_api.csproj",
         "projectName": "web_api",
-        "projectPath": "c:\\Users\\Esteban\\Desktop\\dotnet6_web_api\\web_api.csproj",
-        "packagesPath": "C:\\Users\\Esteban\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Esteban\\Desktop\\dotnet6_web_api\\obj\\",
+        "projectPath": "c:\\Users\\esteb\\OneDrive\\Escritorio\\dotnet6_web_api\\web_api.csproj",
+        "packagesPath": "C:\\Users\\esteb\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\esteb\\OneDrive\\Escritorio\\dotnet6_web_api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Esteban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\esteb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

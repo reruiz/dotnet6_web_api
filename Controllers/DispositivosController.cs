@@ -68,7 +68,7 @@ namespace dotnet6_web_api.Controllers
                 //Crea una lista de la Entidad
                 List<Dispositivo> dispositivos = null;
 
-                //Si el usuario tiene Rol administrador, despliega todos los Dispositivos de todos los PROGRAMAS.
+                //Consulta en la base de datos todos los objetos Dispositivos almacenados
                 dispositivos = await _context.Dispositivos.ToListAsync();
 
                 //Deberia al menos entregar una lista de Dispositivos vacios, nunca null.

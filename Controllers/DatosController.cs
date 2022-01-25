@@ -1,13 +1,15 @@
-using AutoMapper;
-using dotnet6_web_api.Automapper;
-using dotnet6_web_api.Contexts;
-using dotnet6_web_api.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnet6_web_api.Models;
+using dotnet6_web_api.Contexts;
+using Microsoft.EntityFrameworkCore;
+using dotnet6_web_api.Dtos;
+using dotnet6_web_api.Automapper;
+using AutoMapper;
+
 
 namespace dotnet6_web_api.Controllers
 {
@@ -46,6 +48,39 @@ namespace dotnet6_web_api.Controllers
         }
         #endregion
 
+
+
+        /// <summary>
+        /// GET: Devuelve los objetos Datos desde la bd.
+        /// </summary>
+        /// <param name="consultaDTO">Corresponde a una lista de datos que seran ingresados</param>
+        /// <returns></returns>
+        //Etiqueta que determina el tipo de Acción.(Debe estar presente, sino, genera errores.)
+        [HttpGet]
+        public async Task<ActionResult<List<DatoDTO>>> Datos(ConsultaDTO consultaDTO)
+        {
+
+            //Consulta en la base de datos todos los abjetos Datos almacenados
+            var datos = await _context.Datos
+                        .Where(e => e.DispositivoId == consultaDTO.DispositivoId)
+                        .Where(e => e.Tiempo >= consultaDTO.TiempoInicio)
+                        .Where(e => e.Tiempo <= consultaDTO.TiempoFin)
+                        .ToListAsync();
+
+            //Crea una lista de DTO para el despliegue al usuario.
+            var datosDto = new List<DatoDTO>();
+
+            //Rellena la lista de DTO
+            foreach (var item in datos)
+            {
+                var datDto = AutomapperDato.DTO(item, _mapper);
+                datosDto.Add(datDto);
+            }
+
+            //Retonar un 200 de operacion exitosa, sin contenido
+            return datosDto;
+        }
+
         /// <summary>
         /// POST: Ingresa datos desde dipositivos remotos en la bd.
         /// </summary>
@@ -64,7 +99,7 @@ namespace dotnet6_web_api.Controllers
                 //Almacena la Entidad en la BD
                 _context.Add(dato);
             }
-            
+
             //Almacena los cambios en la base de datos
             await _context.SaveChangesAsync();
 
