@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>web_api</name>
+    </assembly>
+    <members>
+        <member name="T:dotnet6_web_api.Automapper.AutomapperDato">
+            <summary>
+            Una clase personalizada para auto mapear de objetos DTO a objetos Entidades y viceversa.
+            Una clase 'AutomapperEntidad' por entidad que es necesario mapear en los controladores.
+            Simplifica codigo y atiende a las particularidades que automapper no soluciona facilmente.
+            </summary>
+        </member>
+        <member name="M:dotnet6_web_api.Automapper.AutomapperDato.DTO(dotnet6_web_api.Models.Dato,AutoMapper.IMapper)">
+            <summary>
+            Mapea DTO para visualizar.
+            Devuelve un objeto DTO a partir de un objeto Datos
+            </summary>
+            <param name="fuente">Objeto Dato</param>
+            <param name="mapper">Objeto mapper inyectado</param>
+            <returns>Clase DTO para visualización por el usuario</returns>
+        </member>
+        <member name="M:dotnet6_web_api.Automapper.AutomapperDato.Editar(dotnet6_web_api.Dtos.DatoCrearEditarDTO,dotnet6_web_api.Models.Dato)">
+            <summary>
+            Mapea entidad para edición de objeto en BD.
+            Devuelve un objeto Dato a partir de una clase DTO ingresada por el usuario.
+            </summary>
+            <param name="fuente">DTO ingresada por el usuario</param>
+            <param name="destino">Entidad</param>
+            <returns>Entidad para editar BD</returns>
+        </member>
+        <member name="M:dotnet6_web_api.Automapper.AutomapperDato.Crear(dotnet6_web_api.Dtos.DatoCrearEditarDTO,AutoMapper.IMapper)">
+            <summary>
+            Mapea entidad para creación de objeto en BD
+            Devuelve un objeto Dato a partir de una clase DTO ingresada por el usuario.
+            </summary>
+            <param name="fuente">DTO ingresada por el usuario</param>
+            <param name="mapper">Objeto mapper inyectado</param>
+            <returns>Entidad para crear BD</returns>
+        </member>
+        <member name="T:dotnet6_web_api.Automapper.AutomapperDispositivo">
+            <summary>
+            Una clase personalizada para auto mapear de objetos DTO a objetos Entidades y viceversa.
+            Una clase 'AutomapperEntidad' por entidad que es necesario mapear en los controladores.
+            Simplifica codigo y atiende a las particularidades que automapper no soluciona facilmente.
+            </summary>
+        </member>
+        <member name="M:dotnet6_web_api.Automapper.AutomapperDispositivo.DTO(dotnet6_web_api.Models.Dispositivo,AutoMapper.IMapper)">
+            <summary>
+            Mapea DTO para visualizar.
+            Devuelve un objeto DTO a partir de un objeto Dispositivo
+            </summary>
+            <param name="fuente">Objeto Dispositivo</param>
+            <param name="mapper">Objeto mapper inyectado</param>
+            <returns>Clase DTO para visualización por el usuario</returns>
+        </member>
+        <member name="M:dotnet6_web_api.Automapper.AutomapperDispositivo.Editar(dotnet6_web_api.Dtos.DispositivoCrearEditarDTO,dotnet6_web_api.Models.Dispositivo)">
+            <summary>
+            Mapea entidad para edición de objeto en BD.
+            Devuelve un objeto Dispositivo a partir de una clase DTO ingresada por el usuario.
+            </summary>
+            <param name="fuente">DTO ingresada por el usuario</param>
+            <param name="destino">Entidad</param>
+            <returns>Entidad para editar BD</returns>
+        </member>
+        <member name="M:dotnet6_web_api.Automapper.AutomapperDispositivo.Crear(dotnet6_web_api.Dtos.DispositivoCrearEditarDTO,AutoMapper.IMapper)">
+            <summary>
+            Mapea entidad para creación de objeto en BD
+            Devuelve un objeto Dispositivo a partir de una clase DTO ingresada por el usuario.
+            </summary>
+            <param name="fuente">DTO ingresada por el usuario</param>
+            <param name="mapper">Objeto mapper inyectado</param>
+            <returns>Entidad para crear BD</returns>
+        </member>
+        <member name="T:dotnet6_web_api.Controllers.DatosController">
+            <summary>
+            Controlador de la clase... 
+            ...
+            </summary>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DatosController.#ctor(dotnet6_web_api.Contexts.ApplicationDbContext,AutoMapper.IMapper)">
+            <summary>
+            Contructor del Controlador.
+            En el constructor se obtienen los diferentes objetos que fueron inicializados en la clase Startup, 
+            y se transfieren al Controlador mediante la técnica de Inyección de Dependencias.
+            </summary>
+            <param name="context">Inyección de objeto BdContext para gestion de BD</param>
+            <param name="mapper">Inyección de objeto Mapper para mapear objetos</param>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DatosController.Datos(dotnet6_web_api.Dtos.ConsultaDTO)">
+            <summary>
+            GET: Devuelve los objetos Datos desde la bd.
+            </summary>
+            <param name="consultaDTO">Corresponde a una lista de datos que seran ingresados</param>
+            <returns></returns>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DatosController.Create(System.Collections.Generic.List{dotnet6_web_api.Dtos.DatoCrearEditarDTO})">
+            <summary>
+            POST: Ingresa datos desde dipositivos remotos en la bd.
+            </summary>
+            <param name="datosIngresadosDTO">Corresponde a una lista de datos que seran ingresados</param>
+            <returns></returns>
+        </member>
+        <member name="T:dotnet6_web_api.Controllers.DispositivosController">
+            <summary>
+            Clase Controlador de entidad Dispositivos. Se implementan las funciones básicas
+            para la capa de persistencia de datos de la Entidad Dispositivos
+            CRUD: "Crear, Leer, Actualizar y Borrar"
+            </summary>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.#ctor(dotnet6_web_api.Contexts.ApplicationDbContext,AutoMapper.IMapper)">
+            <summary>
+            Contructor del Controlador.
+            En el constructor se obtienen los diferentes objetos que fueron inicializados en la clase Startup, 
+            y se transfieren al Controlador mediante la técnica de Inyección de Dependencias.
+            </summary>
+            <param name="context">Inyección de objeto BdContext para gestion de BD</param>
+            <param name="mapper">Inyección de objeto Mapper para mapear objetos</param>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Index">
+            <summary>
+            GET: Devuelve todos los objetos Dispositivos del usuario actual.
+            </summary>
+            <returns>Lista de Dispositivos del usuario actual</returns>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Create(dotnet6_web_api.Dtos.DispositivoCrearEditarDTO)">
+            <summary>
+            POST: Crea un nuevo Dispositivo.
+            </summary>
+            <param name="dispositivoCreacionDTO">Datos requeridos para crear el nuevo Dispositivo</param>
+            <returns></returns>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Details(System.Int32)">
+            <summary>
+            GET: Devuelve los datos del Dispositivo coincidente con el Id buscado.
+            </summary>
+            <param name="id"> Id del Dispositivo buscado</param>
+            <returns></returns>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Edit(System.Int32,dotnet6_web_api.Dtos.DispositivoCrearEditarDTO)">
+            <summary>
+            PUT: Edita un Dispositivo segun su Id.
+            </summary>
+            <param name="id">Id del Dispositivo que se editará</param>
+            <param name="dispositivoEditarDto">Datos del Dispositivo que se editará</param>
+            <returns></returns>
+        </member>
+        <member name="M:dotnet6_web_api.Controllers.DispositivosController.Delete(System.Int32)">
+            <summary>
+            DELETE: Elimina un Dispositivo según su Id.
+            </summary>
+            <param name="id"> Id del Dispositivo a eliminar</param>
+            <returns></returns>
+        </member>
+        <member name="T:dotnet6_web_api.Services.DtoFormato">
+             <summary>
+            Clase para unir nombre e id en las Clases DTO, con
+            el fín de facilitar la lectura de las claves foraneas
+            Se utiliza en algunos casos especiales.
+             </summary>
+        </member>
+    </members>
+</doc>

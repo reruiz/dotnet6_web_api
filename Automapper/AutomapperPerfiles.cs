@@ -14,6 +14,9 @@ namespace dotnet6_web_api.Automapper
         {
             CreateMap<Dispositivo, DispositivoDTO>().ReverseMap();
             CreateMap<Dispositivo, DispositivoCrearEditarDTO>().ReverseMap();
+            
+            CreateMap<Dato, DatoDTO>().ReverseMap();
+            CreateMap<Dato, DatoCrearEditarDTO>().ReverseMap();
         }
     }
 }
