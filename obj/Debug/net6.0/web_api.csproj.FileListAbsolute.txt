@@ -62,3 +62,5 @@ C:\Users\Esteban\Desktop\dotnet6_web_api\obj\Debug\net6.0\ref\web_api.dll
 C:\Users\Esteban\Desktop\dotnet6_web_api\obj\Debug\net6.0\web_api.xml
 C:\Users\Esteban\Desktop\dotnet6_web_api\obj\Debug\net6.0\web_api.pdb
 C:\Users\Esteban\Desktop\dotnet6_web_api\obj\Debug\net6.0\web_api.genruntimeconfig.cache
+C:\Users\Esteban\Desktop\dotnet6_web_api\bin\Debug\net6.0\Services\Datos\datos_dipositivo1.json
+C:\Users\Esteban\Desktop\dotnet6_web_api\bin\Debug\net6.0\Services\Datos\datos_dipositivo2.json

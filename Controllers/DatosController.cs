@@ -56,7 +56,7 @@ namespace dotnet6_web_api.Controllers
         /// <param name="consultaDTO">Corresponde a una lista de datos que seran ingresados</param>
         /// <returns></returns>
         //Etiqueta que determina el tipo de Acción.(Debe estar presente, sino, genera errores.)
-        [HttpGet]
+        [HttpPost("descarga")]
         public async Task<ActionResult<List<DatoDTO>>> Datos(ConsultaDTO consultaDTO)
         {
 
